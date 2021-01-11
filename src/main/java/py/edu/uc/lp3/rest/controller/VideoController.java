@@ -19,7 +19,7 @@ public class VideoController {
 
 	@RequestMapping(value = "/api/lp3/video", method = RequestMethod.GET)
     public List<Video> list() {
-        return videoService.findAll();
+        return videoService.listAll();
     }
 
     @RequestMapping(value = "/api/lp3/video", method = RequestMethod.POST)

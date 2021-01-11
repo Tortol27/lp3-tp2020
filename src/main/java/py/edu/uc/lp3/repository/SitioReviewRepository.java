@@ -11,5 +11,5 @@ import py.edu.uc.lp3.content.Video;
 
 @Repository
 public interface SitioReviewRepository extends PagingAndSortingRepository<SitioReview, Long> {
-	List<SitioReview> showByVideo(Video video);
+	List<SitioReview> findByVideo(Video video);
 }

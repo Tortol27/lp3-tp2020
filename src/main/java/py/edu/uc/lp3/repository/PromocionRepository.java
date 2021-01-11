@@ -9,6 +9,6 @@ import py.edu.uc.lp3.content.Promocion;
 
 @Repository
 public interface PromocionRepository extends PagingAndSortingRepository<Promocion, Long> {
-	List<Promocion> listByType(String tipo);
-	List<Promocion> listAll();
+	Promocion findById(int id);
+	List<Promocion> findBySite(String site);
 }

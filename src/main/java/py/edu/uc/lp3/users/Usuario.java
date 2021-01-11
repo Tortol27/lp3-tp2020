@@ -10,12 +10,14 @@ public class Usuario implements Autorizable, Visible{
 	String username; //correo o username
 	String password;
 	List<String> roles;
+	int id;
 	
-	public Usuario(String username, String password, List<String> roles) {
+	public Usuario(String username, String password, List<String> roles, int id) {
 		super();
 		this.username = username;
 		this.password = password;
 		this.roles = roles;
+		this.id = id;
 	}
 
 	public void verVideo(Video video) {

@@ -8,8 +8,8 @@ import py.edu.uc.lp3.content.Video;
 
 public class Admin extends Usuario implements Administrable, Modificable{
 	
-	public Admin(String username, String password, List<String> roles) {
-		super(username, password, roles);
+	public Admin(String username, String password, List<String> roles, int id) {
+		super(username, password, roles, id);
 		// TODO Auto-generated constructor stub
 	}
 

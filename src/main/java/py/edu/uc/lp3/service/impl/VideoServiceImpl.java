@@ -18,11 +18,11 @@ public class VideoServiceImpl implements VideoService {
 	private VideoRepository videoRepository;
 	
 	@Override
-	public List<Video> findAll() {
+	public List<Video> listAll() {
 		List<Video> videos = new ArrayList<>();
-		Iterator<Video> aulasIterator = videoRepository.findAll().iterator();
-		while (aulasIterator.hasNext()) {
-			videos.add(aulasIterator.next());
+		Iterator<Video> videosIterator = videoRepository.findAll().iterator();
+		while (videosIterator.hasNext()) {
+			videos.add(videosIterator.next());
 		}
 		return videos;
 	}
@@ -30,6 +30,18 @@ public class VideoServiceImpl implements VideoService {
 	@Override
 	public void save(Video institute) {
 		videoRepository.save(institute);
+	}
+
+	@Override
+	public List<Video> listByGenero(String genero) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
