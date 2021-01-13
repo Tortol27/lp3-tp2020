@@ -4,6 +4,7 @@ public class SitioReview implements Visible{
 	String nombre; //nombre del sitio
 	String url;
 	String rating; //el rating del sitio
+	int id;
 	
 	
 
