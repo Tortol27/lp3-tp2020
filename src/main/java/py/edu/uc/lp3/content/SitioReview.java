@@ -1,9 +1,16 @@
 package py.edu.uc.lp3.content;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class SitioReview implements Visible{
 	String nombre; //nombre del sitio
 	String url;
 	String rating; //el rating del sitio
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
 	

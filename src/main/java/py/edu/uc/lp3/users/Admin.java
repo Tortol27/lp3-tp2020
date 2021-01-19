@@ -1,11 +1,13 @@
 package py.edu.uc.lp3.users;
 
 import java.util.List;
+import javax.persistence.Entity;
 
 import py.edu.uc.lp3.content.Promocion;
 import py.edu.uc.lp3.content.SitioReview;
 import py.edu.uc.lp3.content.Video;
 
+@Entity
 public class Admin extends Usuario implements Administrable, Modificable{
 	
 	public Admin(String username, String password, List<String> roles, long id) {

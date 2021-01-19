@@ -1,10 +1,12 @@
 package py.edu.uc.lp3.users;
 
 import java.util.List;
+import javax.persistence.Entity;
 
 import py.edu.uc.lp3.content.SitioReview;
 import py.edu.uc.lp3.content.Video;
 
+@Entity
 public class Curador extends Usuario implements Modificable{
 	String[] categorias; //lista de categorias a moderar
 	

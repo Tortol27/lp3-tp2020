@@ -1,7 +1,9 @@
 package py.edu.uc.lp3.content;
 
 import java.util.List;
+import javax.persistence.Entity;
 
+@Entity
 public class Serie extends Video{
 	
 	int episodios;

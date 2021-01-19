@@ -1,15 +1,21 @@
 package py.edu.uc.lp3.users;
 
 import java.util.List;
-
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import py.edu.uc.lp3.content.Video;
 import py.edu.uc.lp3.content.Visible;
 import py.edu.uc.lp3.utils.Listar;
 
+@Entity
 public class Usuario implements Autorizable, Visible{
 	String username; //correo o username
 	String password;
 	List<String> roles;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
 	public Usuario(String username, String password, List<String> roles, long id) {

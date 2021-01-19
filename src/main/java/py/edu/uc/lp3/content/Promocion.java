@@ -1,12 +1,19 @@
 package py.edu.uc.lp3.content;
 
 import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 import py.edu.uc.lp3.utils.Notificar;
 
+@Entity
 public class Promocion implements Visible, Expirable {
 	String tipo; //si es mes gratis, descuento, etc
 	Date vencimiento; 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	SitioReview sitio; //url del sitio en el que se canjea la promo
 	

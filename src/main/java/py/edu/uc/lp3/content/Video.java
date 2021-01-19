@@ -2,11 +2,18 @@ package py.edu.uc.lp3.content;
 
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import py.edu.uc.lp3.utils.Listar;
 
+@Entity
 public class Video implements Visible, Clasificable{
 	String nombre;
 	String genero;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	List<SitioReview> ratings; //una lista donde almacenar los rating de distintos tipos
 	
