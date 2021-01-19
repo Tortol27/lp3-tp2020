@@ -9,7 +9,7 @@ public class Curador extends Usuario implements Modificable{
 	String[] categorias; //lista de categorias a moderar
 	
 	
-	public Curador(String username, String password, List<String> roles, String[] categorias, int id) {
+	public Curador(String username, String password, List<String> roles, String[] categorias, long id) {
 		super(username, password, roles, id);
 		this.categorias = categorias;
 	}

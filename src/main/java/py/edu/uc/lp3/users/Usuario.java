@@ -10,14 +10,14 @@ public class Usuario implements Autorizable, Visible{
 	String username; //correo o username
 	String password;
 	List<String> roles;
-	int id;
+	private long id;
 	
-	public Usuario(String username, String password, List<String> roles, int id) {
+	public Usuario(String username, String password, List<String> roles, long id) {
 		super();
 		this.username = username;
 		this.password = password;
 		this.roles = roles;
-		this.id = id;
+		this.setId(id);
 	}
 
 	public void verVideo(Video video) {
@@ -73,6 +73,14 @@ public class Usuario implements Autorizable, Visible{
 	public void mostrarDatos() {
 		// TODO Auto-generated method stub
 		Listar.roles(this.roles);
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 }

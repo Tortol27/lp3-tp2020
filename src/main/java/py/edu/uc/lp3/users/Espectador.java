@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Espectador extends Usuario implements Potenciable {
 	
-	public Espectador(String username, String password, List<String> roles, int id) {
+	public Espectador(String username, String password, List<String> roles, long id) {
 		super(username, password, roles, id);
 		// TODO Auto-generated constructor stub
 	}

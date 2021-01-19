@@ -7,7 +7,7 @@ import py.edu.uc.lp3.utils.Notificar;
 public class Promocion implements Visible, Expirable {
 	String tipo; //si es mes gratis, descuento, etc
 	Date vencimiento; 
-	int id;
+	private long id;
 	SitioReview sitio; //url del sitio en el que se canjea la promo
 	
 
@@ -40,12 +40,12 @@ public class Promocion implements Visible, Expirable {
 	}
 
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

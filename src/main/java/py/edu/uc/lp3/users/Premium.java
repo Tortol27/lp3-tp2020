@@ -12,7 +12,7 @@ public class Premium extends Espectador implements Notificable, Expirable {
 	List<Promocion> promos;
 	Date vencimiento;
 	
-	public Premium(String username, String password, List<String> roles, List<Promocion> promos, Date vencimiento, int id) {
+	public Premium(String username, String password, List<String> roles, List<Promocion> promos, Date vencimiento, long id) {
 		super(username, password, roles, id);
 		this.promos = promos;
 		this.vencimiento = vencimiento;

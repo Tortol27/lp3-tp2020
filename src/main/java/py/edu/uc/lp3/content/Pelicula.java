@@ -6,7 +6,7 @@ public class Pelicula extends Video{
 	int emision; //fecha en la que salio
 	
 	
-	public Pelicula(String nombre, String genero, int id, List<SitioReview> ratings, int emision) {
+	public Pelicula(String nombre, String genero, long id, List<SitioReview> ratings, int emision) {
 		super(nombre, genero, id, ratings);
 		this.emision = emision;
 	}

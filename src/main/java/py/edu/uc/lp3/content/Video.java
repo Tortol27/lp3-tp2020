@@ -7,12 +7,12 @@ import py.edu.uc.lp3.utils.Listar;
 public class Video implements Visible, Clasificable{
 	String nombre;
 	String genero;
-	int id;
+	private long id;
 	List<SitioReview> ratings; //una lista donde almacenar los rating de distintos tipos
 	
 	
 	
-	public Video(String nombre, String genero, int id, List<SitioReview> ratings) {
+	public Video(String nombre, String genero, long id, List<SitioReview> ratings) {
 		super();
 		this.nombre = nombre;
 		this.genero = genero;
@@ -41,12 +41,12 @@ public class Video implements Visible, Clasificable{
 	}
 
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

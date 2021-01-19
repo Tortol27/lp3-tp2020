@@ -4,7 +4,7 @@ public class SitioReview implements Visible{
 	String nombre; //nombre del sitio
 	String url;
 	String rating; //el rating del sitio
-	int id;
+	private long id;
 	
 	
 
@@ -35,6 +35,14 @@ public class SitioReview implements Visible{
 	public void mostrarDatos() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 }
