@@ -3,6 +3,7 @@ package py.edu.uc.lp3.service.impl;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -62,5 +63,13 @@ public class UsuarioServiceImpl implements UsuarioService {
 		
 	}
 
+	public Usuario findById(long id) {
+		Usuario user = null;
+		Optional<Usuario> optional = usuarioRepository.findById(id);
+		if (optional.isPresent()) {
+			user = optional.get();
+		}
+		return user;
+	}
 
 }

@@ -11,8 +11,6 @@ public interface VideoService {
 
 	List<Video> listAll();
 	List<Video> listByGenero(String genero);
-	Video findById(long id);
-
 	void savePelicula(Pelicula pelicula);
 	void saveSerie(Serie serie);
 	

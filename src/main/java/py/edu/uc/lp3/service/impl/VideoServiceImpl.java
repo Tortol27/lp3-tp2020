@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import py.edu.uc.lp3.content.Pelicula;
 import py.edu.uc.lp3.content.Serie;
 import py.edu.uc.lp3.content.Video;
-import py.edu.uc.lp3.domain.Aula;
 import py.edu.uc.lp3.repository.VideoRepository;
 import py.edu.uc.lp3.service.VideoService;
 
@@ -60,7 +59,6 @@ public class VideoServiceImpl implements VideoService {
 		
 	}
 
-	@Override
 	public Video findById(long id) {
 		Video video = null;
 		Optional<Video> optional = videoRepository.findById(id);

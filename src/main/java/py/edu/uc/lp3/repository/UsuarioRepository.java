@@ -10,5 +10,4 @@ import py.edu.uc.lp3.users.Usuario;
 @Repository
 public interface UsuarioRepository extends PagingAndSortingRepository<Usuario, Long> {
 	List<Usuario> findByName(String name);
-	Usuario findById(long id);
 }
