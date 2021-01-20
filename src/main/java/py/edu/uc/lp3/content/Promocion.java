@@ -15,15 +15,28 @@ public class Promocion implements Visible, Expirable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	SitioReview sitio; //url del sitio en el que se canjea la promo
+	String url; //url del sitio en el que se canjea la promo
 	
+	public Promocion() {
+		
+	}
+	
+	public String getUrl() {
+		return url;
+	}
 
-	public Promocion(String tipo, Date vencimiento, int id, SitioReview sitio) {
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+
+	public Promocion(String tipo, Date vencimiento, int id, String sitio) {
 		super();
 		this.tipo = tipo;
 		this.vencimiento = vencimiento;
 		this.id = id;
-		this.sitio = sitio;
+		this.url = sitio;
 	}
 
 
@@ -54,15 +67,6 @@ public class Promocion implements Visible, Expirable {
 
 	public void setId(long id) {
 		this.id = id;
-	}
-
-	public SitioReview getSitio() {
-		return sitio;
-	}
-
-
-	public void setSitio(SitioReview sitio) {
-		this.sitio = sitio;
 	}
 
 

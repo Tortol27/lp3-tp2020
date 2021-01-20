@@ -10,6 +10,9 @@ import py.edu.uc.lp3.content.Video;
 public class Curador extends Usuario implements Modificable{
 	String[] categorias; //lista de categorias a moderar
 	
+	public Curador() {
+		
+	}
 	
 	public Curador(String username, String password, List<String> roles, String[] categorias, long id) {
 		super(username, password, roles, id);

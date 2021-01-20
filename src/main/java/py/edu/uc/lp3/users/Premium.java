@@ -2,6 +2,8 @@ package py.edu.uc.lp3.users;
 
 import java.util.Date;
 import java.util.List;
+
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import py.edu.uc.lp3.content.Expirable;
 import py.edu.uc.lp3.content.Promocion;
@@ -10,6 +12,7 @@ import py.edu.uc.lp3.utils.Notificar;
 
 @Entity
 public class Premium extends Espectador implements Notificable, Expirable {
+	@ElementCollection
 	List<Promocion> promos;
 	Date vencimiento;
 	

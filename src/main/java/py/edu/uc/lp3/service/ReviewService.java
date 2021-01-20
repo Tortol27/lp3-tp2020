@@ -10,6 +10,6 @@ public interface ReviewService {
 	
 	void save (SitioReview sitioreview);
 	
-	void delete(int id); //aun no se segun que se va eliminar
+	void delete(long id); //aun no se segun que se va eliminar
 	
 }

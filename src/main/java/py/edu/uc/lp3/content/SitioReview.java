@@ -13,7 +13,9 @@ public class SitioReview implements Visible{
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 	
-	
+	public SitioReview() {
+		
+	}
 
 	public String getNombre() {
 		return nombre;

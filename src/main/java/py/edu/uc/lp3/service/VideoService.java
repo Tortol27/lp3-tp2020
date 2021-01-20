@@ -14,5 +14,5 @@ public interface VideoService {
 	void savePelicula(Pelicula pelicula);
 	void saveSerie(Serie serie);
 	
-	void delete(int id);
+	void delete(long id);
 }

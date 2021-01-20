@@ -2,11 +2,11 @@ package py.edu.uc.lp3.content;
 
 import java.util.List;
 
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import py.edu.uc.lp3.utils.Listar;
 
 @Entity
 public class Video implements Visible, Clasificable{
@@ -15,11 +15,14 @@ public class Video implements Visible, Clasificable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	List<SitioReview> ratings; //una lista donde almacenar los rating de distintos tipos
+	@ElementCollection
+	List<String> ratings; //una list donde almacenar los url de rating de distintos sitios
 	
-	
-	
-	public Video(String nombre, String genero, long id, List<SitioReview> ratings) {
+	public Video() {
+	}
+
+
+	public Video(String nombre, String genero, long id, List<String> ratings) {
 		super();
 		this.nombre = nombre;
 		this.genero = genero;
@@ -56,15 +59,14 @@ public class Video implements Visible, Clasificable{
 	public void setId(long id) {
 		this.id = id;
 	}
+	
 
-
-	public List<SitioReview> getRatings() {
+	public List<String> getRatings() {
 		return ratings;
 	}
 
 
-	public void setRatings(List<SitioReview> ratings) {
-		//este va ser un chiqui mas complejo
+	public void setRatings(List<String> ratings) {
 		this.ratings = ratings;
 	}
 
@@ -83,17 +85,16 @@ public class Video implements Visible, Clasificable{
 
 
 	@Override
-	public void mostrarDatos() { //va mostrar los ratings
+	public String getRating(SitioReview sitio) {
 		// TODO Auto-generated method stub
-		Listar.ratings(this.ratings);
+		return null;
 	}
 
 
 	@Override
-	public String getRating(SitioReview sitio) {
+	public void mostrarDatos() {
 		// TODO Auto-generated method stub
-		ratings.add(sitio);
-		return null;
+		
 	}
 
 }

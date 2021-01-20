@@ -10,7 +10,11 @@ public class Serie extends Video{
 	int temporadas;
 	int [] emision; //fecha en la que salio al aire y fecha en la que se termino de emitir 
 	
-	public Serie(String nombre, String genero, long id, List<SitioReview> ratings, int episodios, int temporadas,
+	public Serie() {
+		
+	}
+	
+	public Serie(String nombre, String genero, long id, List<String> ratings, int episodios, int temporadas,
 			int[] emision) {
 		super(nombre, genero, id, ratings);
 		this.episodios = episodios;

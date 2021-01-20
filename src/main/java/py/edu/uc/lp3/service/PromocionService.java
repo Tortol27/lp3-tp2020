@@ -11,5 +11,5 @@ public interface PromocionService {
 	
 	void save(Promocion Promo);
 	
-	void delete(int id);
+	void delete(long id);
 }

@@ -54,8 +54,8 @@ public class VideoServiceImpl implements VideoService {
 	}
 
 	@Override
-	public void delete(int id) {
-		videoRepository.deleteById((long) id);
+	public void delete(long id) {
+		videoRepository.deleteById(id);
 		
 	}
 
